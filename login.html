@@ -10,10 +10,9 @@
     <title>执着小丘の小屋</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="javascript" href="assets/js/login.js" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
@@ -30,20 +29,16 @@
             </header>
 
             <hr />
-            <h2>登录界面</h2>
-            <form method="post" action="#">
-                <div class="fields">
-                    <div class="field">
-                        <input type="text" name="username" id="username" placeholder="用户名" />
-                    </div>
-                    <div class="field">
-                        <input type="password" name="password" id="ppassword" placeholder="密码" />
-                    </div>
+            <h2>登录成功</h2>
+            <div class="fields">
+                <div class="field" id="username">
+                    用户名：admin
                 </div>
-                <ul class="actions special">
-                    <li><input type="button" class="button" value="登录" onclick="login()"></li>
-                </ul>
-            </form>
+            </div>
+            <ul class="actions special">
+                <li><input type="button" class="button" value="注销" onclick="logout()"></li>
+            </ul>
+
             <hr />
 
             <footer>
@@ -58,8 +53,11 @@
     </div>
 
     <!-- Scripts -->
-    <script>
-
+    <script language="javascript" type="text/javascript">
+        function logout() {
+            window.alert("注销成功");
+            window.location.href = "index.html";
+        }
     </script>
 
 </body>

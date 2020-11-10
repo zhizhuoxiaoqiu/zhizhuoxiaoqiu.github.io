@@ -1,9 +1,9 @@
-if ('addEventListener' in window) {
-    window.addEventListener('load', function () {
-        document.body.className = document.body.className.replace(/\bis-preload\b/, '');
-    });
-    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-}
+// if ('addEventListener' in window) {
+//     window.addEventListener('load', function () {
+//         document.body.className = document.body.className.replace(/\bis-preload\b/, '');
+//     });
+//     document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+// }
 
 function login() {
     var login = {
@@ -15,11 +15,11 @@ function login() {
         "reason": "",
         "body": {
             "nickname": "nickname",
-            "Profile": "../../images/1.jpg"
+            "Profile": "../../iimages/avatar.jpg"
         }
     }
     login.username = document.getElementById("username").value;
-    login.password = document.getElementById("ppassword").value;
+    login.password = document.getElementById("password").value;
     if (login.username == "") {
         re.reason = "请输入用户名";
     } else if (login.password == "") {
@@ -34,9 +34,9 @@ function login() {
         re.reason = "登陆成功";
         re.status = 400;
     }
-    alert(re.reason);
+    window.alert(re.reason);
     if (re.status == 400) {
-        
+        window.location.href = "login.html";
     }
-    
+
 }
